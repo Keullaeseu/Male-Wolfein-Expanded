@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- 1. Allow Male body type -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyTypes</xpath>
+    <value>
+      <li>Male</li>
+    </value>
+  </Operation>
+
+  <!-- 1b. Lock body types by gender so adult females never roll Male (male art)
+       and males never roll Female. HAR CheckBodyType removes the opposite
+       gender default from candidates on growth. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator</xpath>
+    <value>
+      <defaultMaleBodyType>Male</defaultMaleBodyType>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator</xpath>
+    <value>
+      <defaultFemaleBodyType>Female</defaultFemaleBodyType>
+    </value>
+  </Operation>
+
+  <!-- 2. Male adult body texture. Base path stays Naked_Female for females,
+       Male overrides to Naked_Male (you must ship Common/Textures/Wolfein/Body/Naked_Male_*).
+       Age overrides for Child/Baby are left untouched, Ghoul variant included. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/graphicPaths/body/extendedGraphics</xpath>
+    <value>
+      <BodyType For="Male">
+        <path>Wolfein/Body/Naked_Male</path>
+        <extendedGraphics>
+          <Hediff MayRequire="Ludeon.RimWorld.Anomaly" For="Ghoul">Wolfein/BodyGhoul/Naked_Male</Hediff>
+        </extendedGraphics>
+      </BodyType>
+    </value>
+  </Operation>
+
+  <!-- 3. Tail offsets for Male, copy of Female (0,0) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein tail"]/offsets/north/bodyTypes</xpath>
+    <value><Male>(0,0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein tail"]/offsets/south/bodyTypes</xpath>
+    <value><Male>(0,0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein tail"]/offsets/east/bodyTypes</xpath>
+    <value><Male>(0,0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein tail"]/offsets/west/bodyTypes</xpath>
+    <value><Male>(0,0)</Male></value>
+  </Operation>
+
+  <!-- 4. Right ear offsets for Male, copy of Female (0.0, 0.0) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein right ear"]/offsets/north/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein right ear"]/offsets/south/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein right ear"]/offsets/east/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein right ear"]/offsets/west/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+
+  <!-- 5. Left ear offsets for Male, copy of Female (0.0, 0.0) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein left ear"]/offsets/north/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein left ear"]/offsets/south/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein left ear"]/offsets/east/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="Wolfein left ear"]/offsets/west/bodyTypes</xpath>
+    <value><Male>(0.0, 0.0)</Male></value>
+  </Operation>
+
+  <!-- Note: ahoge / eyebrow / hair / legs use layerOffset only (no per-bodyType),
+       so they work for Male without patch. -->
+
+  <!-- Apparel: Male pawns need _Male mirrors.
+       Wolfein apparel ships base texture + _Female variant (e.g. Shirt_Trousers.png + Shirt_Trousers_Female_*).
+       This mod ships _Male copies so males render correctly.
+       If you find a dress that is female-only:
+       add your own Common/Textures/... + PatchOperationReplace wornGraphicPath. -->
+
+</Patch>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Male Wolfein Expanded</name>
+	<author>Keullaeseu</author>
+	<packageId>keullaeseu.MaleWolfeinExpanded</packageId>
+	<modVersion>1.0.0.0</modVersion>
+	<url>https://github.com/Keullaeseu/Male-Wolfein-Expanded</url>
+	<description>Adds rare male Wolfein (10% by default).
+
+- Male adult body + Ghoul variant, with tail and ear offsets.
+- Flat child bodies, so boys no longer use the breasted base child art.
+- Removes fixedGender on Wolfein pawns so maleGenderProbability applies.
+- With XML Extensions: adjust the spawn chance in Mod Settings (0-100%, restart required). Without it: fixed 10%.
+
+Requires Wolfein Race. Load after Wolfein Race.
+
+Supported Wolfein mods (Male apparel mirrors included where needed):
+- Wolfein Black Science Expand
+- Wolfein Race MegaCorp Edition
+- Wolfein extension: Little Red Riding Hood
+- Wolfein Allegiance, Imperial Weapons, Extra Backstories / Genes, Gene Patch, GFI Expand (no apparel, no patch needed).</description>
+
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+
+	<loadAfter>
+		<li>imranfish.xmlextensions</li>
+		<li>MelonDove.WolfeinRace</li>
+		<li>WolfeinExpand.BlackScience</li>
+		<li>com.zoshsgahdnkc.WRMegaCorpEdition</li>
+		<li>heimu.LittleRedRidingHood</li>
+	</loadAfter>
+
+	<modDependencies>
+		<li>
+			<packageId>imranfish.xmlextensions</packageId>
+			<displayName>XML Extensions</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2574315206</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>MelonDove.WolfeinRace</packageId>
+			<displayName>Wolfein Race</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3473140562</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Wolfein_Race"]/alienRace/generalSettings/maleGenderProbability</xpath>
+    <value>
+      <maleGenderProbability>0.1</maleGenderProbability>
+    </value>
+  </Operation>
+
+  <!-- Must remove fixedGender, otherwise maleGenderProbability is ignored.
+       All Wolfein pawnkinds inherit from Wolfein_PawnBase, so one remove is enough. -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/PawnKindDef[@Name="Wolfein_PawnBase"]/fixedGender</xpath>
+  </Operation>
+</Patch>

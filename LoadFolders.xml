@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+  <v1.6>
+    <li>1.6</li>
+    <li>Common</li>
+    <li IfModNotActive="imranfish.xmlextensions">Compatibility/Default</li>
+    <li IfModActive="imranfish.xmlextensions">Compatibility/Settings</li>
+    <li IfModActive="WolfeinExpand.BlackScience">Compatibility/WolfeinExpand.BlackScience</li>
+    <li IfModActive="com.zoshsgahdnkc.WRMegaCorpEdition">Compatibility/com.zoshsgahdnkc.WRMegaCorpEdition</li>
+    <li IfModActive="heimu.LittleRedRidingHood">Compatibility/heimu.LittleRedRidingHood</li>
+  </v1.6>
+</loadFolders>
