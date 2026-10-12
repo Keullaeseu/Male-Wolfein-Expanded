@@ -14,7 +14,7 @@ By default the Wolfein are almost entirely female (`maleGenderProbability` near 
 
 ## Requirements
 
-- RimWorld 1.6
+- RimWorld
 - [Wolfein Race](https://steamcommunity.com/sharedfiles/filedetails/?id=3473140562)
 - [Ancot Library](https://steamcommunity.com/sharedfiles/filedetails/?id=2988801276) (Wolfein Race dependency)
 - [Humanoid Alien Races](https://steamcommunity.com/sharedfiles/filedetails/?id=839005762) (Wolfein Race dependency)
